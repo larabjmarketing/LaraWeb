@@ -1,21 +1,22 @@
 # Web de Lara Borrego (web completa)
 
-Web estática de 25 páginas (HTML, CSS y JS sin compilación) con fuentes alojadas en el propio sitio.
-
-## ANTES DE PUBLICAR
-1. **Dominio:** sustituye `https://TUDOMINIO.com` por tu dirección real en todos los archivos (canonical, datos estructurados, sitemap y robots).
-2. **Textos legales:** completa `[TU NIF]` y `[TU DOMICILIO PROFESIONAL]` en `aviso-legal/` y `politica-de-privacidad/`, y revísalos con un profesional.
-3. **Reserva de llamada:** si tienes Calendly o TidyCal, pon el enlace en `BOOKING_URL` (en el generador) o sustituye los enlaces "Reservar llamada". Mientras tanto llevan a `/contacto/`.
-4. **WhatsApp:** los botones usan el teléfono de tu CV. Cámbialo o elimínalo si no quieres mostrarlo.
-5. **Fotos:** solo hay una (320 px). Sustitúyela por una de mayor resolución en `assets/lara.jpg`.
-6. **Ejemplos ilustrativos:** son datos hipotéticos y así se indica. No los presentes como casos de clientes.
+Web estática de 43 páginas (HTML, CSS y JS sin compilación), con fuentes alojadas en el propio sitio.
+Estructura de servicios: `/paid-media/`, `/desarrollo-web-ux-ui/`, `/branding/`, `/crm/` y `/social-media/`.
 
 ## Publicar con GitHub Pages
-Sube el contenido de esta carpeta a la raíz de un repositorio público. Settings > Pages > Deploy from a branch > `main` / `(root)`.
-Dominio propio: Settings > Pages > Custom domain. DNS: cuatro registros A a `185.199.108.153`, `185.199.109.153`, `185.199.110.153` y `185.199.111.153`, y un CNAME de `www` a `TU-USUARIO.github.io`.
+Sube el contenido de esta carpeta a la carpeta `docs` de la raíz del repositorio y en Settings > Pages elige `main` / `/docs`.
+Todas las direcciones (canonical, datos estructurados, sitemap, llms.txt) apuntan a `https://larabjmarketing.github.io/LaraWeb`.
+Si compras un dominio propio, sustituye esa dirección en todos los archivos.
+
+## Pendiente de completar
+1. `[TU NIF]` y `[TU DOMICILIO PROFESIONAL]` en `aviso-legal/` y `politica-de-privacidad/` (revisar con un profesional).
+2. Enlace de reserva de llamada: `BOOKING_URL` en el generador o sustituir los enlaces "Reservar llamada".
+3. WhatsApp: el teléfono es el de tu CV. Cambia o elimina los botones si no quieres mostrarlo.
+4. Fotos: `assets/lara.jpg` y `assets/lara.webp` son de 320 px. Sustitúyelas por otras de mayor resolución.
+5. Si añades GA4 o GTM: banner de cookies y actualizar la política de cookies.
 
 ## Después de publicar
-Alta en Google Search Console y envío de `sitemap.xml`. Perfil de Empresa de Google como negocio de área de servicio. Si añades GA4 o GTM, añade también un banner de cookies y actualiza la política de cookies.
+Search Console: alta y envío de `sitemap.xml`. Perfil de Empresa de Google como negocio de área de servicio.
 
 ## Formulario
-Guarda los mensajes en la tabla `contactos` de Supabase (proyecto `web-lara-borrego`), con la página de origen en la columna `origen`. La clave de `assets/main.js` es la pública (publishable).
+Guarda los mensajes en la tabla `contactos` de Supabase (proyecto `web-lara-borrego`), con la página de origen en `origen`. La clave de `assets/main.js` es la pública (publishable).
